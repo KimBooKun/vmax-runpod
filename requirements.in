@@ -1,0 +1,33 @@
+# ---------------------------------------------------------------
+# 2026 자율주행 AI챌린지 - 모션 플래닝 과제
+# V-Max(valeoai) / Waymax(waymo-research) 런타임 의존성
+# 출처: https://github.com/valeoai/V-Max/blob/main/requirements.txt
+# ---------------------------------------------------------------
+
+# Waymo Waymax Simulator
+waymo-waymax @ git+https://github.com/waymo-research/waymax.git@main
+
+# JAX with CUDA 12 support (CUDA/cuDNN 런타임은 pip nvidia-* 휠로 함께 설치됨)
+jax[cuda12]<0.6
+
+# Neural Network Libraries
+flax
+distrax
+einops
+tf_keras
+
+# Utilities
+gymnasium
+hydra-core
+matplotlib<3.10
+tensorboard<2.19
+tensorboard-plugin-profile<2.19
+psutil
+pandas
+seaborn
+ipython
+ipykernel
+
+# 챌린지/RunPod 편의 도구 (V-Max 원본에는 없음)
+huggingface-hub          # V-Max mini 데이터셋 스모크 테스트용
+nvitop                   # GPU 모니터링
